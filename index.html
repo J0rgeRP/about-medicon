@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre de tu App</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 { margin-bottom: 10px; color: #222; }
+        p { line-height: 1.6; color: #666; margin-bottom: 30px; }
+        
+        /* Estilo del botón de Ko-fi */
+        .kofi-button {
+            background-color: #FF5E5B; /* Color oficial Ko-fi */
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(255, 94, 91, 0.4);
+        }
+        .kofi-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 94, 91, 0.6);
+        }
+        .kofi-icon { margin-right: 10px; font-size: 20px; }
+        
+        .footer-links {
+            margin-top: 30px;
+            font-size: 14px;
+        }
+        .footer-links a { color: #666; text-decoration: none; margin: 0 10px; }
+        .footer-links a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. AQUÍ PUEDES PONER EL LOGO DE TU APP SI TIENES UNA URL DE IMAGEN -->
+        <!-- <img src="URL_DE_TU_LOGO.png" width="100" style="border-radius:20px; margin-bottom:20px;"> -->
+
+        <!-- 2. CAMBIA ESTO POR EL NOMBRE DE TU APP -->
+        <h1>Mi App Increíble</h1>
+
+        <!-- 3. CAMBIA ESTO POR TU DESCRIPCIÓN -->
+        <p>
+            Bienvenido a la página oficial. <br>
+            Esta aplicación es privada, segura y 100% gratuita. 
+            No tiene anuncios ni rastreadores.<br><br>
+            Si te gusta mi trabajo y quieres que siga mejorando la app, 
+            puedes invitarme a un café. ¡Gracias por el apoyo!
+        </p>
+
+        <!-- 4. ¡IMPORTANTE! CAMBIA EL ENLACE DE ABAJO POR TU LINK DE KO-FI -->
+        <a href="https://ko-fi.com/TU_USUARIO_AQUI" class="kofi-button" target="_blank">
+            <span class="kofi-icon">☕</span> Invítame a un café
+        </a>
+
+        <div class="footer-links">
+            <!-- Enlaces extra si quieres -->
+            <a href="mailto:tu@email.com">Contacto</a>
+            <a href="https://github.com/TU_USUARIO_GITHUB">Mi GitHub</a>
+        </div>
+    </div>
+
+</body>
+</html>
