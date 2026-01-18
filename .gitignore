@@ -1,0 +1,12 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+gen/
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+*.log
