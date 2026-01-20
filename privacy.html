@@ -4,267 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Medicon</title>
-    <style>
-        :root {
-            --primary-color: #A9BD95; /* Laurel Green */
-            --primary-variant: #FFDFD3; /* Lumber */
-            --on-primary: #1D1C1A; /* Pastel Black */
-            --secondary-color: #B74C4D; /* Deep Chestnut */
-            --secondary-variant: #88201F; /* Vivid Auburn */
-            --on-secondary: #FAF8F6; /* Pastel White */
-            --surface-color: #FFF8EA; /* Cosmic Latte */
-            --on-surface: #1D1C1A; /* Pastel Black */
-        }
 
-        * {
-            box-sizing: border-box;
-        }
+    <!-- Meta Tags -->
+    <meta name="description" content="Privacy Policy for Medicon. We do not collect, store, or share your data. Your health information stays on your device.">
+    <meta name="robots" content="noindex, follow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="ic_launcher.png">
 
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--surface-color);
-            color: var(--on-surface);
-            margin: 0;
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .lang-switcher {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 20px;
-            padding: 5px;
-            display: flex;
-            gap: 5px;
-            z-index: 1000;
-        }
-
-        .lang-btn {
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-weight: bold;
-            color: var(--on-primary);
-            font-size: 0.9rem;
-            opacity: 0.6;
-            transition: all 0.2s;
-        }
-
-        .lang-btn.active {
-            background-color: var(--surface-color);
-            opacity: 1;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            color: var(--on-surface);
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-variant) 100%);
-            width: 100%;
-            padding: 40px 20px;
-            text-align: center;
-            color: var(--on-primary);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .container {
-            max-width: 800px;
-            width: 100%;
-            padding: 0 20px;
-            flex: 1;
-        }
-
-        .card {
-            background: #FFFFFF;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
-            margin-bottom: 30px;
-            border: 1px solid rgba(169, 189, 149, 0.2);
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        h2 {
-            color: var(--secondary-variant);
-            border-bottom: 2px solid var(--primary-variant);
-            padding-bottom: 10px;
-            margin-top: 30px;
-            font-size: 1.5rem;
-        }
-
-        p, ul {
-            margin-bottom: 15px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        footer {
-            margin-top: auto;
-            padding: 40px 20px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--on-surface);
-            opacity: 0.7;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.5);
-            border-top: 1px solid rgba(0,0,0,0.05);
-        }
-
-        footer a {
-            color: var(--secondary-variant);
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: 600;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-top: 20px;
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="privacy-page">
 
-    <header>
+    <header class="privacy-header">
         <div class="lang-switcher">
             <button class="lang-btn active" onclick="setLanguage('en')" id="btn-en">EN</button>
             <button class="lang-btn" onclick="setLanguage('es')" id="btn-es">ES</button>
         </div>
-        <h1 data-i18n="title">Privacy Policy</h1>
-        <p data-i18n="subtitle">Transparency and security for your health data.</p>
+        <h1 data-i18n="priv_title">Privacy Policy</h1>
+        <p data-i18n="priv_subtitle" class="subtitle">Transparency and security for your health data.</p>
     </header>
 
     <div class="container">
-        <div class="card">
-            <p data-i18n="intro">
-                Thank you for using <strong>Medicon</strong>. I am committed to protecting your privacy. This Privacy Policy explains how my application handles your information.
-            </p>
+        <main class="card privacy-content">
+            <p data-i18n="priv_intro">Thank you for using <strong>Medicon</strong>. I am committed to protecting your privacy. This Privacy Policy explains how my application handles your information.</p>
 
-            <h2 data-i18n="section1_title">No Data Collection</h2>
-            <p data-i18n="section1_text">
-                Medicon is a purely offline application. I do not collect, transmit, or store any personal data, health information, or usage statistics on external servers. I do not use any third-party analytics or tracking services.
-            </p>
+            <h2 data-i18n="priv_section1_title">No Data Collection</h2>
+            <p data-i18n="priv_section1_text">Medicon is a purely offline application. I do not collect, transmit, or store any personal data, health information, or usage statistics on external servers. I do not use any third-party analytics or tracking services.</p>
 
-            <h2 data-i18n="section2_title">Local Storage Only</h2>
-            <p data-i18n="section2_text">
-                All information you enter into the application (such as medication names, dosages, expiry dates, and intake logs) is stored locally on your device using a secure Room database. This data never leaves your phone unless you explicitly choose to export it.
-            </p>
+            <h2 data-i18n="priv_section2_title">Local Storage Only</h2>
+            <p data-i18n="priv_section2_text">All information you enter into the application is stored locally on your device using a secure Room database. This data never leaves your phone unless you explicitly choose to export it.</p>
 
-            <h2 data-i18n="section3_title">No Permissions Required</h2>
-            <p data-i18n="section3_text">
-                To ensure your privacy and security, Medicon does not request any dangerous permissions.
-            </p>
+            <h2 data-i18n="priv_section3_title">No Permissions Required</h2>
+            <p data-i18n="priv_section3_text">To ensure your privacy and security, Medicon does not request any dangerous permissions.</p>
             <ul>
                 <li data-i18n="perm1"><strong>No Internet Access:</strong> The app cannot connect to the internet.</li>
                 <li data-i18n="perm2"><strong>No Location Tracking:</strong> I do not track your location.</li>
                 <li data-i18n="perm3"><strong>No Camera/Microphone:</strong> I do not access your sensors.</li>
             </ul>
 
-            <h2 data-i18n="section4_title">Data Control</h2>
-            <p data-i18n="section4_text">
-                You have full control over your data. You can delete all stored information at any time by clearing the application data in your device settings or by uninstalling the application. You can also export your data to CSV format for your own records or backups.
-            </p>
+            <h2 data-i18n="priv_section4_title">Data Control</h2>
+            <p data-i18n="priv_section4_text">You have full control over your data. You can delete all stored information at any time by clearing the application data in your device settings or by uninstalling the application. You can also export your data to CSV format for your own records or backups.</p>
 
-            <h2 data-i18n="section5_title">Contact Me</h2>
-            <p data-i18n="section5_text">
-                If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at:
-            </p>
-            <p>
-                <a href="mailto:j0rgerp.developer@gmail.com">j0rgerp.developer@gmail.com</a>
-            </p>
+            <h2 data-i18n="priv_section5_title">Contact Me</h2>
+            <p data-i18n="priv_section5_text">If you have any questions or suggestions, do not hesitate to contact me at:</p>
+            <p><a href="mailto:j0rgerp.developer@gmail.com" class="contact-email">j0rgerp.developer@gmail.com</a></p>
 
             <a href="index.html" class="back-link" data-i18n="back_home">← Back to Home</a>
-        </div>
+        </main>
     </div>
 
     <footer>
-        <p data-i18n="footer_copy">© 2025 Medicon. Made with ❤️ for your health.</p>
+        <p>© <span id="year"></span> Medicon. <span data-i18n="footer_made_by">Made with ❤️ for your health.</span></p>
     </footer>
 
-    <script>
-        const translations = {
-            en: {}, // Populated from HTML
-            es: {
-                title: "Política de Privacidad",
-                subtitle: "Transparencia y seguridad para tus datos de salud.",
-                intro: "Gracias por usar <strong>Medicon</strong>. Estoy comprometido con la protección de tu privacidad. Esta Política de Privacidad explica cómo mi aplicación maneja tu información.",
-                section1_title: "Sin Recopilación de Datos",
-                section1_text: "Medicon es una aplicación puramente offline. No recopilo, transmito ni almaceno ningún dato personal, información de salud o estadísticas de uso en servidores externos. No utilizo servicios de análisis o seguimiento de terceros.",
-                section2_title: "Solo Almacenamiento Local",
-                section2_text: "Toda la información que introduces en la aplicación (como nombres de medicamentos, dosis, fechas de caducidad y registros de tomas) se almacena localmente en tu dispositivo utilizando una base de datos segura Room. Estos datos nunca salen de tu teléfono a menos que elijas explícitamente exportarlos.",
-                section3_title: "Cero Permisos Requeridos",
-                section3_text: "Para garantizar tu privacidad y seguridad, Medicon no solicita ningún permiso peligroso.",
-                perm1: "<strong>Sin Acceso a Internet:</strong> La app no puede conectarse a internet.",
-                perm2: "<strong>Sin Rastreo de Ubicación:</strong> No rastreo tu ubicación.",
-                perm3: "<strong>Sin Cámara/Micrófono:</strong> No accedo a tus sensores.",
-                section4_title: "Control de Datos",
-                section4_text: "Tienes control total sobre tus datos. Puedes eliminar toda la información almacenada en cualquier momento borrando los datos de la aplicación en los ajustes de tu dispositivo o desinstalando la aplicación. También puedes exportar tus datos a formato CSV para tus propios registros o copias de seguridad.",
-                section5_title: "Contáctame",
-                section5_text: "Si tienes alguna pregunta o sugerencia sobre mi Política de Privacidad, no dudes en contactarme en:",
-                back_home: "← Volver al Inicio",
-                footer_copy: "© 2025 Medicon. Hecho con ❤️ para tu salud."
-            }
-        };
-
-        function setLanguage(lang) {
-            const elements = document.querySelectorAll('[data-i18n]');
-            elements.forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (translations[lang] && translations[lang][key]) {
-                    if (translations[lang][key].includes('<')) {
-                        el.innerHTML = translations[lang][key];
-                    } else {
-                        el.textContent = translations[lang][key];
-                    }
-                }
-            });
-
-            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById('btn-' + lang).classList.add('active');
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                translations.en[key] = el.innerHTML;
-            });
-
-            const userLang = navigator.language || navigator.userLanguage; 
-            if (userLang.startsWith('es')) {
-                setLanguage('es');
-            } else {
-                setLanguage('en');
-            }
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
