@@ -307,11 +307,285 @@ footer a { color: var(--secondary-variant); text-decoration: none; margin: 0 12p
 
 /* --- Media Queries --- */
 @media (max-width: 600px) {
-    .hero-screen { padding: 60px 20px; margin-bottom: 40px; }
-    .index-header { margin-bottom: 25px; }
-    .hero-card { padding: 30px 20px; }
+    .hero-screen { 
+        padding: 60px 20px 80px; 
+        margin-bottom: 40px;
+        min-height: 100vh;
+        min-height: 100dvh;
+        justify-content: flex-start;
+    }
+    .index-header { margin-bottom: 20px; }
+    .index-header h1 { font-size: clamp(2.25rem, 10vw, 3rem); }
+    .index-header .subtitle { font-size: 1.1rem; padding: 0 10px; }
+    .logo { width: 80px; height: 80px; border-radius: 20px; margin-bottom: 15px; }
+    .hero-card { padding: 25px 20px; width: 100%; }
+    .hero-card h2 { font-size: 1.4rem; margin-bottom: 12px; }
+    .hero-card-text { font-size: 1rem; line-height: 1.5; }
     .floating-donate { right: 15px; width: 50px; height: 50px; }
-    .index-header h1 { font-size: 2.75rem; }
     .privacy-header h1 { font-size: 2rem; }
     .card { padding: 30px 20px; }
+    .feature-grid { grid-template-columns: 1fr; }
+    .scroll-indicator { bottom: 15px; }
+}
+
+@media (max-height: 650px) and (max-width: 600px) {
+    .hero-screen { padding-top: 40px; }
+    .logo { width: 60px; height: 60px; margin-bottom: 10px; }
+    .index-header h1 { font-size: 2rem; }
+    .hero-card { padding: 20px; }
+    .scroll-indicator { display: none; } /* Hide if too short to avoid overlap */
+}
+
+/* --- Download Page Styles --- */
+.download-screen {
+    justify-content: flex-start;
+    padding-top: 60px;
+}
+
+.download-card {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+}
+
+.version-badge {
+    background: var(--surface);
+    color: var(--secondary-variant);
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+    border: 1px solid rgba(183, 76, 77, 0.1);
+}
+
+.download-options {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.download-option h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.25rem;
+    justify-content: center;
+    color: var(--on-surface);
+}
+
+.download-option p {
+    margin: 0 0 20px 0;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.btn-main-download {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-variant) 100%);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: var(--transition);
+    box-shadow: 0 8px 20px rgba(183, 76, 77, 0.25);
+}
+
+.btn-main-download:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(183, 76, 77, 0.35);
+}
+
+.btn-main-download .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
+}
+
+.btn-main-download .label {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.btn-main-download .sub {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+.btn-store-download {
+    background: #1D1C1A;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.btn-store-download:hover {
+    transform: translateY(-2px);
+    background: #333;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.divider {
+    position: relative;
+    height: 1px;
+    background: rgba(0,0,0,0.08);
+    margin: 10px 0;
+}
+
+.divider span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 0 15px;
+    color: #999;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.changelog-preview {
+    margin-top: 40px;
+    text-align: left;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.changelog-preview h4 {
+    margin: 0 0 15px 0;
+    color: var(--secondary);
+}
+
+.changelog-preview ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* --- Hero Section Buttons (Index) --- */
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-hero {
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.btn-hero.primary {
+    background: var(--secondary);
+    color: white;
+    box-shadow: 0 4px 12px rgba(183, 76, 77, 0.2);
+}
+
+.btn-hero.primary:hover {
+    background: var(--secondary-variant);
+    transform: translateY(-2px);
+}
+
+.btn-hero.outline {
+    background: transparent;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+}
+
+.btn-hero.outline:hover {
+    background: var(--secondary);
+    color: white;
+}
+
+/* --- Modal/Popup --- */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    transform: scale(1);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.modal-overlay.hidden .modal-content {
+    transform: scale(0.9);
+}
+
+.modal-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: var(--surface);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+
+.modal-content h3 {
+    color: var(--secondary-variant);
+    margin: 0 0 10px 0;
+}
+
+.modal-content p {
+    color: #666;
+    margin: 0 0 25px 0;
+}
+
+.modal-close-btn {
+    background: var(--secondary);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.modal-close-btn:hover {
+    background: var(--secondary-variant);
+    transform: scale(1.05);
 }

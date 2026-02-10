@@ -34,6 +34,30 @@ const translations = {
         footer_contact: "Contacto",
         footer_github: "GitHub",
 
+        // Download Page
+        download_subtitle: "Descarga la última versión",
+        latest_version_label: "Última Versión",
+        direct_download: "Descarga Directa",
+        direct_download_desc: "Obtén el archivo APK directamente. Ideal para actualizaciones rápidas.",
+        btn_download_apk: "Descargar APK",
+        or_divider: "O",
+        store_download: "Tienda de Apps",
+        store_download_desc: "Obtén actualizaciones automáticas vía Huawei AppGallery.",
+        btn_appgallery: "Explorar en AppGallery",
+        whats_new: "Novedades",
+        changelog_1: "Mejoras de rendimiento",
+        changelog_2: "Corrección de errores menores",
+        back_home: "← Volver al Inicio",
+        btn_get_app: "Descargar App",
+        btn_appgallery_short: "AppGallery",
+
+        // Modals
+        modal_update_title: "¡Actualización Disponible!",
+        modal_update_msg: "Hay una nueva versión de Medicon disponible. Te recomendamos actualizar.",
+        modal_latest_title: "Estás al día",
+        modal_latest_msg: "Ya tienes instalada la última versión de Medicon.",
+        modal_btn_close: "Cerrar",
+
         // Privacy Page
         priv_title: "Política de Privacidad",
         priv_subtitle: "Transparencia y seguridad para tus datos de salud.",
@@ -120,3 +144,71 @@ document.addEventListener('DOMContentLoaded', () => {
         revealElements.forEach(el => revealObserver.observe(el));
     }
 });
+
+/* --- Download Page Logic --- */
+const LATEST_VERSION = "1.2.3"; // Update this when releasing new versions
+
+function compareVersions(v1, v2) {
+    // Returns 1 if v1 > v2, -1 if v1 < v2, 0 if equal
+    const parts1 = v1.split('.').map(Number);
+    const parts2 = v2.split('.').map(Number);
+    
+    for (let i = 0; i < Math.max(parts1.length, parts2.length); i++) {
+        const p1 = parts1[i] || 0;
+        const p2 = parts2[i] || 0;
+        if (p1 > p2) return 1;
+        if (p1 < p2) return -1;
+    }
+    return 0;
+}
+
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+function closeModal() {
+    const modal = document.getElementById('version-modal');
+    if (modal) modal.classList.add('hidden');
+}
+
+// Logic to run only on download.html
+if (window.location.pathname.includes('download.html')) {
+    document.addEventListener('DOMContentLoaded', () => {
+        const userVersion = getQueryParam('version');
+        const modal = document.getElementById('version-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalMsg = document.getElementById('modal-message');
+        const modalIcon = document.getElementById('modal-icon');
+        
+        // Update displayed version
+        const versionDisplay = document.getElementById('web-version-display');
+        if (versionDisplay) versionDisplay.textContent = LATEST_VERSION;
+
+        if (userVersion && modal) {
+            const comparison = compareVersions(LATEST_VERSION, userVersion);
+            let showModal = false;
+
+            // Get current lang for messages (simple check)
+            const isEs = document.documentElement.lang === 'es' || (navigator.language || 'en').startsWith('es');
+            
+            if (comparison > 0) {
+                // Update Available
+                modalTitle.textContent = isEs ? translations.es.modal_update_title : "Update Available!";
+                modalMsg.textContent = isEs ? translations.es.modal_update_msg : "A new version of Medicon is available. We recommend updating.";
+                modalIcon.textContent = "🚀";
+                showModal = true;
+            } else {
+                // Up to date
+                modalTitle.textContent = isEs ? translations.es.modal_latest_title : "You are up to date";
+                modalMsg.textContent = isEs ? translations.es.modal_latest_msg : "You already have the latest version of Medicon.";
+                modalIcon.textContent = "✨";
+                showModal = true;
+            }
+
+            if (showModal) {
+                modal.classList.remove('hidden');
+            }
+        }
+    });
+}
