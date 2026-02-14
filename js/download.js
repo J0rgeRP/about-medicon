@@ -1,6 +1,7 @@
 import { compareVersions, getQueryParam } from './utils.js';
 import { translations } from './i18n.js';
 import { changelogData } from './changelog-data.js';
+import { closeModal } from './ui.js';
 
 const LATEST_VERSION = "1.3.0";
 
@@ -61,7 +62,17 @@ export function initDownloadPage() {
     const versionDisplay = document.getElementById('web-version-display');
     if (versionDisplay) versionDisplay.textContent = LATEST_VERSION;
 
+    // Update APK link
+    const downloadApkBtn = document.getElementById('download-apk-btn');
+    const apkFilename = `medicon-v${LATEST_VERSION}.apk`;
+    if (downloadApkBtn) {
+        downloadApkBtn.href = apkFilename;
+    }
+
     if (userVersion && modal) {
+        const modalActionBtn = document.getElementById('modal-action-btn');
+        const modalCancelBtn = document.getElementById('modal-cancel-btn');
+
         const comparison = compareVersions(LATEST_VERSION, userVersion);
         let showModal = false;
 
@@ -73,12 +84,40 @@ export function initDownloadPage() {
             modalTitle.textContent = isEs ? translations.es.modal_update_title : "Update Available!";
             modalMsg.textContent = isEs ? translations.es.modal_update_msg : "A new version of Medicon is available. We recommend updating.";
             modalIcon.textContent = "🚀";
+            
+            // Setup Download Action
+            if (modalActionBtn) {
+                modalActionBtn.setAttribute('data-i18n', 'modal_btn_download');
+                modalActionBtn.textContent = isEs ? translations.es.modal_btn_download : "Download Now";
+                modalActionBtn.onclick = () => {
+                    window.location.href = apkFilename;
+                    closeModal();
+                };
+            }
+            if (modalCancelBtn) {
+                modalCancelBtn.classList.remove('hidden');
+                modalCancelBtn.setAttribute('data-i18n', 'modal_btn_dismiss');
+                modalCancelBtn.textContent = isEs ? translations.es.modal_btn_dismiss : "Dismiss";
+            }
+            
             showModal = true;
         } else {
             // Up to date
             modalTitle.textContent = isEs ? translations.es.modal_latest_title : "You are up to date";
             modalMsg.textContent = isEs ? translations.es.modal_latest_msg : "You already have the latest version of Medicon.";
             modalIcon.textContent = "✨";
+            
+            if (modalActionBtn) {
+                modalActionBtn.setAttribute('data-i18n', 'modal_btn_close');
+                modalActionBtn.textContent = isEs ? translations.es.modal_btn_close : "OK";
+                modalActionBtn.onclick = () => {
+                    closeModal();
+                };
+            }
+            if (modalCancelBtn) {
+                modalCancelBtn.classList.add('hidden');
+            }
+            
             showModal = true;
         }
 

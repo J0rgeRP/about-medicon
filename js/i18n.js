@@ -57,6 +57,8 @@ const translations = {
         modal_latest_title: "Estás al día",
         modal_latest_msg: "Ya tienes instalada la última versión de Medicon.",
         modal_btn_close: "Cerrar",
+        modal_btn_download: "Descargar Ahora",
+        modal_btn_dismiss: "Descartar",
 
         // Privacy Page
         priv_title: "Política de Privacidad",

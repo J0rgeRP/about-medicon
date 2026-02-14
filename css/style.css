@@ -589,3 +589,29 @@ footer a { color: var(--secondary-variant); text-decoration: none; margin: 0 12p
     background: var(--secondary-variant);
     transform: scale(1.05);
 }
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.modal-secondary-btn {
+    background: #f0f0f0;
+    color: #444;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.modal-secondary-btn:hover {
+    background: #e5e5e5;
+    transform: scale(1.05);
+}
+
+.modal-secondary-btn.hidden {
+    display: none;
+}
