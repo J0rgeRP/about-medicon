@@ -5,7 +5,7 @@ export const changelogData = [
         changes: {
             en: [
                 "Profiles are here! Now you can manage medications for multiple profiles that you can create, edit, and delete.",
-                "Improved medicine card design in the First Aid Kit.",
+                "Improved medicine card design in the Medicine Cabinet.",
                 "Improved widget to include the current profile color.",
                 "Performance improvements and bug fixes."
             ],
