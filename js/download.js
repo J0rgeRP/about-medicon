@@ -2,7 +2,7 @@ import { compareVersions, getQueryParam } from './utils.js';
 import { translations } from './i18n.js';
 import { changelogData } from './changelog-data.js';
 
-const LATEST_VERSION = "1.2.4"; // Update this when releasing new versions
+const LATEST_VERSION = "1.3.0";
 
 function renderChangelog(lang) {
     const container = document.getElementById('changelog-container');

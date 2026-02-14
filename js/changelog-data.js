@@ -1,5 +1,23 @@
 export const changelogData = [
     {
+        version: "1.3.0",
+        date: "2026-02-14",
+        changes: {
+            en: [
+                "Profiles are here! Now you can manage medications for multiple profiles that you can create, edit, and delete.",
+                "Improved medicine card design in the First Aid Kit.",
+                "Improved widget to include the current profile color.",
+                "Performance improvements and bug fixes."
+            ],
+            es: [
+                "¡Llegaron los perfiles! Ahora puedes gestionar los medicamentos de varios perfiles que puedes crear, editar y eliminar.",
+                "Se ha mejorado el diseño de las tarjetas de los medicamentos en el Botiquín.",
+                "Se ha mejorado el widget para incluir el color del perfil actual.",
+                "Se mejora el rendimiento y se corrigen errores."
+            ]
+        }
+    },
+    {
         version: "1.2.4",
         date: "2026-02-10",
         changes: {
@@ -8,38 +26,6 @@ export const changelogData = [
             ],
             es: [
                 "Ahora puedes comprobar si hay actualizaciones de la app desde la pantalla de Ajustes."
-            ]
-        }
-    },
-    {
-        version: "1.2.0",
-        date: "2024-01-15",
-        changes: {
-            en: [
-                "New feature: Dark Mode support.",
-                "Added export to CSV functionality.",
-                "Minor bug fixes."
-            ],
-            es: [
-                "Nueva función: Soporte para Modo Oscuro.",
-                "Añadida funcionalidad de exportación a CSV.",
-                "Correcciones de errores menores."
-            ]
-        }
-    },
-    {
-        version: "1.0.0",
-        date: "2023-11-20",
-        changes: {
-            en: [
-                "Initial release of Medicon.",
-                "Track your medications easily.",
-                "Secure and private local database."
-            ],
-            es: [
-                "Lanzamiento inicial de Medicon.",
-                "Sigue tus medicamentos fácilmente.",
-                "Base de datos local segura y privada."
             ]
         }
     }

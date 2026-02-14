@@ -3,6 +3,22 @@ export function closeModal() {
     if (modal) modal.classList.add('hidden');
 }
 
+export function injectFooter() {
+    const footer = document.querySelector('footer');
+    if (!footer) return;
+
+    footer.innerHTML = `
+        <p>© <span id="year"></span> Medicon. <span data-i18n="footer_made_by">Made with ❤️ for your health.</span></p>
+        <div class="footer-links">
+            <a href="download.html" data-i18n="btn_get_app">Get App</a>
+            <a href="privacy.html" data-i18n="footer_privacy">Privacy Policy</a>
+            <a href="mailto:j0rgerp.developer@gmail.com" data-i18n="footer_contact">Contact</a>
+            <a href="https://github.com/J0rgeRP" target="_blank" rel="noopener noreferrer"
+               data-i18n="footer_github">GitHub</a>
+        </div>
+    `;
+}
+
 export function initUI() {
     // Set Year
     const yearEl = document.getElementById('year');
