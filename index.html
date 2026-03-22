@@ -2,44 +2,44 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medicon - Medicine Inventory & Control</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicon - Medicine Inventory & Control</title>
 
-    <!-- Meta Tags -->
-    <meta name="description"
-          content="Medicon is a private, offline medicine inventory assistant. Manage your drugs, track intakes, and stay organized with a beautiful, secure app.">
-    <meta name="keywords" content="medicine, inventory, health, offline, privacy, reminder, pill tracker, android">
-    <meta name="author" content="Jorge RP">
-    <meta name="theme-color" content="#A9BD95">
+  <!-- Meta Tags -->
+  <meta name="description"
+        content="Medicon is a private, offline medicine inventory assistant. Manage your drugs, track intakes, and stay organized with a beautiful, secure app.">
+  <meta name="keywords" content="medicine, inventory, health, offline, privacy, reminder, pill tracker, android">
+  <meta name="author" content="Jorge RP">
+  <meta name="theme-color" content="#A9BD95">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://j0rgerp.github.io/about-medicon/">
-    <meta property="og:title" content="Medicon - Your Health, Organized">
-    <meta property="og:description"
-          content="A beautiful, private, and complete medicine inventory assistant. No ads, no tracking.">
-    <meta property="og:image" content="ic_launcher.png">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://j0rgerp.github.io/about-medicon/">
+  <meta property="og:title" content="Medicon - Your Health, Organized">
+  <meta property="og:description"
+        content="A beautiful, private, and complete medicine inventory assistant. No ads, no tracking.">
+  <meta property="og:image" content="ic_launcher.png">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://j0rgerp.github.io/about-medicon/">
-    <meta property="twitter:title" content="Medicon - Medicine Inventory">
-    <meta property="twitter:description"
-          content="Manage your first aid kit and medication schedule with privacy and ease.">
-    <meta property="twitter:image" content="ic_launcher.png">
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://j0rgerp.github.io/about-medicon/">
+  <meta property="twitter:title" content="Medicon - Medicine Inventory">
+  <meta property="twitter:description"
+        content="Manage your first aid kit and medication schedule with privacy and ease.">
+  <meta property="twitter:image" content="ic_launcher.png">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="ic_launcher.png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="ic_launcher.png">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -47,114 +47,114 @@
 <a href="#donate-section" class="floating-donate" id="floating-donate" title="Support Medicon"><span>☕</span></a>
 
 <div class="hero-screen">
-    <div class="lang-switcher">
-        <button class="lang-btn active" onclick="setLanguage('en')" id="btn-en">EN</button>
-        <button class="lang-btn" onclick="setLanguage('es')" id="btn-es">ES</button>
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="setLanguage('en')" id="btn-en">EN</button>
+    <button class="lang-btn" onclick="setLanguage('es')" id="btn-es">ES</button>
+  </div>
+
+  <header class="index-header">
+    <img src="ic_launcher.png" alt="Medicon Logo" class="logo">
+    <h1>Medicon</h1>
+    <p class="subtitle" data-i18n="header_subtitle">Your beautiful, private, and complete medicine inventory
+      assistant.</p>
+  </header>
+
+  <section class="hero-card" id="first-card">
+    <h2 data-i18n="index_section1_title">Your Health, Organized</h2>
+    <p data-i18n="index_section1_text" class="hero-card-text">
+      Medicon is designed to give you full control over your first aid kit and medication schedule.
+      Manage your drugs visually and intuitively with a native experience built for performance and privacy.
+    </p>
+
+    <div class="hero-actions">
+      <a href="download.html" class="btn-hero primary" id="btn-hero-download">
+        <span aria-hidden="true">⬇️</span> <span data-i18n="btn_get_app">Get App</span>
+      </a>
     </div>
+  </section>
 
-    <header class="index-header">
-        <img src="ic_launcher.png" alt="Medicon Logo" class="logo">
-        <h1>Medicon</h1>
-        <p class="subtitle" data-i18n="header_subtitle">Your beautiful, private, and complete medicine inventory
-            assistant.</p>
-    </header>
-
-    <section class="hero-card" id="first-card">
-        <h2 data-i18n="index_section1_title">Your Health, Organized</h2>
-        <p data-i18n="index_section1_text" class="hero-card-text">
-            Medicon is designed to give you full control over your first aid kit and medication schedule.
-            Manage your drugs visually and intuitively with a native experience built for performance and privacy.
-        </p>
-
-        <div class="hero-actions">
-            <a href="download.html" class="btn-hero primary" id="btn-hero-download">
-                <span aria-hidden="true">⬇️</span> <span data-i18n="btn_get_app">Get App</span>
-            </a>
-        </div>
-    </section>
-
-    <div class="scroll-indicator" id="scroll-indicator" role="button" aria-label="Scroll down" tabindex="0"
-         onclick="document.getElementById('main-content').scrollIntoView({behavior: 'smooth'})">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-             aria-hidden="true">
-            <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
-        </svg>
-    </div>
+  <div class="scroll-indicator" id="scroll-indicator" role="button" aria-label="Scroll down" tabindex="0"
+       onclick="document.getElementById('main-content').scrollIntoView({behavior: 'smooth'})">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+         aria-hidden="true">
+      <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+    </svg>
+  </div>
 </div>
 
 <div class="container" id="main-content">
-    <section class="card reveal feature-card" id="features-card">
-        <h2><span data-i18n="features_title">Key Features</span></h2>
-        <div class="feature-grid">
-            <div class="feature-item">
-                <strong data-i18n="feat1_title">📦 Unlimited Inventory</strong>
-                <span data-i18n="feat1_desc">Register drugs with dosage, color, purchase & expiration dates, and
+  <section class="card reveal feature-card" id="features-card">
+    <h2><span data-i18n="features_title">Key Features</span></h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <strong data-i18n="feat1_title">📦 Unlimited Inventory</strong>
+        <span data-i18n="feat1_desc">Register drugs with dosage, color, purchase & expiration dates, and
                         prescription requirements.</span>
-            </div>
-            <div class="feature-item">
-                <strong data-i18n="feat2_title">💊 Detailed Intake Log</strong>
-                <span data-i18n="feat2_desc">Track every dose with date, time, and specific reasons to keep a
+      </div>
+      <div class="feature-item">
+        <strong data-i18n="feat2_title">💊 Detailed Intake Log</strong>
+        <span data-i18n="feat2_desc">Track every dose with date, time, and specific reasons to keep a
                         perfect history.</span>
-            </div>
-            <div class="feature-item">
-                <strong data-i18n="feat3_title">📅 Interactive Calendar</strong>
-                <span data-i18n="feat3_desc">Browse your history with beautiful animations and advanced filtering
+      </div>
+      <div class="feature-item">
+        <strong data-i18n="feat3_title">📅 Interactive Calendar</strong>
+        <span data-i18n="feat3_desc">Browse your history with beautiful animations and advanced filtering
                         options.</span>
-            </div>
-            <div class="feature-item">
-                <strong data-i18n="feat4_title">👥 Unlimited Profiles</strong>
-                <span data-i18n="feat4_desc">Manage medications for multiple people with independent and personalized profiles.</span>
-            </div>
-            <div class="feature-item">
-                <strong data-i18n="feat5_title">🔔 Smart Reminders</strong>
-                <span data-i18n="feat5_desc">Stay on track with reminders that integrate directly with your phone's
+      </div>
+      <div class="feature-item">
+        <strong data-i18n="feat4_title">👥 Unlimited Profiles</strong>
+        <span data-i18n="feat4_desc">Manage medications for multiple people with independent and personalized profiles.</span>
+      </div>
+      <div class="feature-item">
+        <strong data-i18n="feat5_title">🔔 Smart Reminders</strong>
+        <span data-i18n="feat5_desc">Stay on track with reminders that integrate directly with your phone's
                         native calendar.</span>
-            </div>
-            <div class="feature-item">
-                <strong data-i18n="feat6_title">📱 Quick-Action Widget</strong>
-                <span data-i18n="feat6_desc">Register takes in seconds without even opening the app.</span>
-            </div>
-        </div>
-    </section>
+      </div>
+      <div class="feature-item">
+        <strong data-i18n="feat6_title">📱 Quick-Action Widget</strong>
+        <span data-i18n="feat6_desc">Register takes in seconds without even opening the app.</span>
+      </div>
+    </div>
+  </section>
 
-    <section class="card highlight-section reveal">
-        <h2 data-i18n="privacy_title">Privacy First</h2>
-        <p class="privacy-intro" data-i18n="privacy_text">Medicon respects your data. It is a <strong>pure
-            native</strong> application with <strong>zero permissions</strong> required:</p>
-        <ul class="privacy-list">
-            <li>
-                <span class="privacy-checkmark" aria-hidden="true">✓</span>
-                <div><strong data-i18n="priv_item1_title">No Internet Access:</strong> <span
-                        data-i18n="priv_item1_desc">Your data never leaves your device.</span></div>
-            </li>
-            <li>
-                <span class="privacy-checkmark" aria-hidden="true">✓</span>
-                <div><strong data-i18n="priv_item2_title">Local Database:</strong> <span
-                        data-i18n="priv_item2_desc">All information is stored securely in a local phone
+  <section class="card highlight-section reveal">
+    <h2 data-i18n="privacy_title">Privacy First</h2>
+    <p class="privacy-intro" data-i18n="privacy_text">Medicon respects your data. It is a <strong>pure
+      native</strong> application with <strong>zero permissions</strong> required:</p>
+    <ul class="privacy-list">
+      <li>
+        <span class="privacy-checkmark" aria-hidden="true">✓</span>
+        <div><strong data-i18n="priv_item1_title">No Internet Access:</strong> <span
+            data-i18n="priv_item1_desc">Your data never leaves your device.</span></div>
+      </li>
+      <li>
+        <span class="privacy-checkmark" aria-hidden="true">✓</span>
+        <div><strong data-i18n="priv_item2_title">Local Database:</strong> <span
+            data-i18n="priv_item2_desc">All information is stored securely in a local phone
                             database.</span>
-                </div>
-            </li>
-            <li>
-                <span class="privacy-checkmark" aria-hidden="true">✓</span>
-                <div><strong data-i18n="priv_item3_title">Exportable:</strong> <span
-                        data-i18n="priv_item3_desc">Full control with CSV export and import capabilities.</span>
-                </div>
-            </li>
-        </ul>
-    </section>
+        </div>
+      </li>
+      <li>
+        <span class="privacy-checkmark" aria-hidden="true">✓</span>
+        <div><strong data-i18n="priv_item3_title">Exportable:</strong> <span
+            data-i18n="priv_item3_desc">Full control with CSV export and import capabilities.</span>
+        </div>
+      </li>
+    </ul>
+  </section>
 
-    <section class="cta-section reveal" id="donate-section">
-        <h2 data-i18n="donate_title">Support Development</h2>
-        <p data-i18n="cta_text">
-            I developed this application in my free time because I believe in health data privacy. It has no ads, no
-            trackers, and is completely free. If you find it useful and want to buy me a coffee so I can keep
-            maintaining it, you can do it here:
-        </p>
-        <a href="https://ko-fi.com/j0rgerp" class="donate-button" target="_blank" rel="noopener noreferrer">
-            <span class="donate-icon" aria-hidden="true">☕</span> <span data-i18n="btn_paypal">Buy me a
+  <section class="cta-section reveal" id="donate-section">
+    <h2 data-i18n="donate_title">Support Development</h2>
+    <p data-i18n="cta_text">
+      I developed this application in my free time because I believe in health data privacy. It has no ads, no
+      trackers, and is completely free. If you find it useful and want to buy me a coffee so I can keep
+      maintaining it, you can do it here:
+    </p>
+    <a href="https://ko-fi.com/j0rgerp" class="donate-button" target="_blank" rel="noopener noreferrer">
+      <span class="donate-icon" aria-hidden="true">☕</span> <span data-i18n="btn_paypal">Buy me a
                     coffee</span>
-        </a>
-    </section>
+    </a>
+  </section>
 </div>
 
 <footer></footer>

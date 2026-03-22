@@ -2,106 +2,106 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Medicon - Get the App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Medicon - Get the App</title>
 
-    <!-- Meta Tags -->
-    <meta name="description" content="Download the latest version of Medicon directly or via AppGallery.">
-    <meta name="theme-color" content="#A9BD95">
+  <!-- Meta Tags -->
+  <meta name="description" content="Download the latest version of Medicon directly or via AppGallery.">
+  <meta name="theme-color" content="#A9BD95">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="ic_launcher.png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="ic_launcher.png">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/changelog.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/changelog.css">
 </head>
 
 <body>
 
 <!-- Version Check Modal -->
 <div id="version-modal" class="modal-overlay hidden">
-    <div class="modal-content">
-        <div class="modal-icon" id="modal-icon">📱</div>
-        <h3 id="modal-title">Checking version...</h3>
-        <p id="modal-message">Please wait.</p>
-        <div class="modal-actions">
-            <button id="modal-cancel-btn" class="modal-secondary-btn hidden" onclick="closeModal()"
-                    data-i18n="modal_btn_dismiss">Dismiss
-            </button>
-            <button id="modal-action-btn" class="modal-close-btn" onclick="closeModal()" data-i18n="modal_btn_close">
-                OK
-            </button>
-        </div>
+  <div class="modal-content">
+    <div class="modal-icon" id="modal-icon">📱</div>
+    <h3 id="modal-title">Checking version...</h3>
+    <p id="modal-message">Please wait.</p>
+    <div class="modal-actions">
+      <button id="modal-cancel-btn" class="modal-secondary-btn hidden" onclick="closeModal()"
+              data-i18n="modal_btn_dismiss">Dismiss
+      </button>
+      <button id="modal-action-btn" class="modal-close-btn" onclick="closeModal()" data-i18n="modal_btn_close">
+        OK
+      </button>
     </div>
+  </div>
 </div>
 
 <div class="hero-screen download-screen">
-    <div class="lang-switcher">
-        <button class="lang-btn active" onclick="setLanguage('en')" id="btn-en">EN</button>
-        <button class="lang-btn" onclick="setLanguage('es')" id="btn-es">ES</button>
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="setLanguage('en')" id="btn-en">EN</button>
+    <button class="lang-btn" onclick="setLanguage('es')" id="btn-es">ES</button>
+  </div>
+
+  <header class="index-header">
+    <a href="index.html">
+      <img src="ic_launcher.png" alt="Medicon Logo" class="logo">
+    </a>
+    <h1>Medicon</h1>
+    <p class="subtitle" data-i18n="download_subtitle">Download the latest version</p>
+  </header>
+
+  <section class="card download-card reveal active">
+    <div class="version-badge">
+      <span data-i18n="latest_version_label">Latest Version</span>: <strong
+        id="web-version-display"></strong>
     </div>
 
-    <header class="index-header">
-        <a href="index.html">
-            <img src="ic_launcher.png" alt="Medicon Logo" class="logo">
-        </a>
-        <h1>Medicon</h1>
-        <p class="subtitle" data-i18n="download_subtitle">Download the latest version</p>
-    </header>
-
-    <section class="card download-card reveal active">
-        <div class="version-badge">
-            <span data-i18n="latest_version_label">Latest Version</span>: <strong
-                id="web-version-display"></strong>
-        </div>
-
-        <div class="download-options">
-            <!-- Direct APK Download -->
-            <div class="download-option primary">
-                <h3 data-i18n="direct_download">Direct Download</h3>
-                <p data-i18n="direct_download_desc">Get the APK file directly. Best for quick updates.</p>
-                <a href="" class="btn-main-download" id="download-apk-btn" download>
-                    <span class="icon">⬇️</span>
-                    <span class="text">
+    <div class="download-options">
+      <!-- Direct APK Download -->
+      <div class="download-option primary">
+        <h3 data-i18n="direct_download">Direct Download</h3>
+        <p data-i18n="direct_download_desc">Get the APK file directly. Best for quick updates.</p>
+        <a href="" class="btn-main-download" id="download-apk-btn" download>
+          <span class="icon">⬇️</span>
+          <span class="text">
                             <span class="label" data-i18n="btn_download_apk">Download APK</span>
                             <span class="sub" id="apk-size">~3 MB</span>
                         </span>
-                </a>
-            </div>
+        </a>
+      </div>
 
-            <div class="divider"><span data-i18n="or_divider">OR</span></div>
+      <div class="divider"><span data-i18n="or_divider">OR</span></div>
 
-            <!-- Store Download -->
-            <div class="download-option secondary">
-                <h3 data-i18n="store_download">App Store</h3>
-                <p data-i18n="store_download_desc">Get automatic updates via Huawei AppGallery.</p>
-                <a href="https://appgallery.huawei.com/app/C116746875" target="_blank"
-                   class="btn-store-download huawei">
-                    <span class="icon">👜</span>
-                    <span data-i18n="btn_appgallery">Explore on AppGallery</span>
-                </a>
-            </div>
-        </div>
+      <!-- Store Download -->
+      <div class="download-option secondary">
+        <h3 data-i18n="store_download">App Store</h3>
+        <p data-i18n="store_download_desc">Get automatic updates via Huawei AppGallery.</p>
+        <a href="https://appgallery.huawei.com/app/C116746875" target="_blank"
+           class="btn-store-download huawei">
+          <span class="icon">👜</span>
+          <span data-i18n="btn_appgallery">Explore on AppGallery</span>
+        </a>
+      </div>
+    </div>
 
-        <div class="changelog-preview">
-            <h4 data-i18n="whats_new">What's New</h4>
-            <div id="changelog-container" class="changelog-container">
-                <!-- Dynamically populated -->
-            </div>
-        </div>
-    </section>
+    <div class="changelog-preview">
+      <h4 data-i18n="whats_new">What's New</h4>
+      <div id="changelog-container" class="changelog-container">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+  </section>
 
-    <a href="index.html" class="back-link" data-i18n="back_home">
-        ← Back to Home
-    </a>
+  <a href="index.html" class="back-link" data-i18n="back_home">
+    ← Back to Home
+  </a>
 </div>
 
 <footer></footer>

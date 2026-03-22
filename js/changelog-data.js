@@ -1,5 +1,17 @@
 export const changelogData = [
     {
+        version: "1.2.4",
+        date: "2026-02-10",
+        changes: {
+            en: [
+                "Now you can check for app updates from the Settings screen."
+            ],
+            es: [
+                "Ahora puedes comprobar si hay actualizaciones de la app desde la pantalla de Ajustes."
+            ]
+        }
+    },
+    {
         version: "1.3.0",
         date: "2026-02-14",
         changes: {
@@ -18,14 +30,16 @@ export const changelogData = [
         }
     },
     {
-        version: "1.2.4",
-        date: "2026-02-10",
+        version: "1.3.1",
+        date: "2026-03-22",
         changes: {
             en: [
-                "Now you can check for app updates from the Settings screen."
+                "Improved how the prescription medication is identified in the Medicine Cabinet.",
+                "Performance optimizations."
             ],
             es: [
-                "Ahora puedes comprobar si hay actualizaciones de la app desde la pantalla de Ajustes."
+                "Se mejora la forma de marcar los medicamentos con receta en el Botiquín.",
+                "Se optimiza el rendimiento."
             ]
         }
     }

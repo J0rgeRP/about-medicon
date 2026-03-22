@@ -3,7 +3,7 @@ import { translations } from './i18n.js';
 import { changelogData } from './changelog-data.js';
 import { closeModal } from './ui.js';
 
-const LATEST_VERSION = "1.3.0";
+const LATEST_VERSION = changelogData[changelogData.length - 1].version;
 
 function renderChangelog(lang) {
     const container = document.getElementById('changelog-container');
@@ -11,7 +11,7 @@ function renderChangelog(lang) {
 
     container.innerHTML = '';
 
-    changelogData.forEach(item => {
+    [...changelogData].reverse().forEach(item => {
         const changes = item.changes[lang] || item.changes['en']; // Fallback to EN
 
         const versionBlock = document.createElement('div');
