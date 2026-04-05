@@ -1,81 +1,81 @@
 /* --- Changelog Styles --- */
 .changelog-container {
-    max-height: 250px;
-    overflow-y: auto;
-    padding-right: 10px;
-    scrollbar-width: thin;
-    scrollbar-color: var(--secondary) rgba(0, 0, 0, 0.05);
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) rgba(0, 0, 0, 0.05);
 }
 
 .changelog-container::-webkit-scrollbar {
-    width: 6px;
+  width: 6px;
 }
 
 .changelog-container::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.02);
-    border-radius: 10px;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 10px;
 }
 
 .changelog-container::-webkit-scrollbar-thumb {
-    background-color: var(--secondary);
-    border-radius: 20px;
+  background-color: var(--secondary);
+  border-radius: 20px;
 }
 
 .version-block {
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
 }
 
 .version-block:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
 .version-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
 }
 
 .version-number {
-    font-weight: 700;
-    color: var(--secondary);
-    font-size: 1.05rem;
-    background: rgba(183, 76, 77, 0.08);
-    /* slight background for version badge feeling */
-    padding: 2px 8px;
-    border-radius: 6px;
+  font-weight: 700;
+  color: var(--secondary);
+  font-size: 1.05rem;
+  background: rgba(183, 76, 77, 0.08);
+  /* slight background for version badge feeling */
+  padding: 2px 8px;
+  border-radius: 6px;
 }
 
 .version-date {
-    font-size: 0.8rem;
-    color: #999;
-    font-weight: 500;
+  font-size: 0.8rem;
+  color: #999;
+  font-weight: 500;
 }
 
 .change-list {
-    margin: 0;
-    padding-left: 18px;
-    color: #555;
-    font-size: 0.92rem;
-    line-height: 1.5;
+  margin: 0;
+  padding-left: 18px;
+  color: #555;
+  font-size: 0.92rem;
+  line-height: 1.5;
 }
 
 .change-list li {
-    margin-bottom: 6px;
-    position: relative;
-    list-style-type: none;
-    /* Custom bullet */
+  margin-bottom: 6px;
+  position: relative;
+  list-style-type: none;
+  /* Custom bullet */
 }
 
 .change-list li::before {
-    content: "•";
-    color: var(--primary);
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
+  content: "•";
+  color: var(--primary);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
