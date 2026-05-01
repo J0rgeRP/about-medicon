@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="i18n-pending">
 
 <head>
   <meta charset="UTF-8">
@@ -49,59 +49,61 @@
     <button class="lang-btn" onclick="setLanguage('es')" id="btn-es">ES</button>
   </div>
 
-  <header class="index-header">
-    <a href="index.html">
-      <img src="ic_launcher.png" alt="Medicon Logo" class="logo">
-    </a>
-    <h1>Medicon</h1>
-    <p class="subtitle" data-i18n="download_subtitle">Download the latest version</p>
-  </header>
+  <div class="download-layout">
+    <header class="index-header download-header">
+      <a href="index.html">
+        <img src="ic_launcher.png" alt="Medicon Logo" class="logo">
+      </a>
+      <span class="hero-eyebrow" data-i18n="download_kicker">Private Android app</span>
+      <h1>Medicon</h1>
+      <p class="subtitle" data-i18n="download_subtitle">Download the latest version</p>
+      <a href="index.html" class="back-link" data-i18n="back_home">
+        ← Back to Home
+      </a>
+    </header>
 
-  <section class="card download-card reveal active">
-    <div class="version-badge">
-      <span data-i18n="latest_version_label">Latest Version</span>: <strong
-        id="web-version-display"></strong>
-    </div>
-
-    <div class="download-options">
-      <!-- Direct APK Download -->
-      <div class="download-option primary">
-        <h3 data-i18n="direct_download">Direct Download</h3>
-        <p data-i18n="direct_download_desc">Get the APK file directly. Best for quick updates.</p>
-        <a href="" class="btn-main-download" id="download-apk-btn" download>
-          <span class="icon">⬇️</span>
-          <span class="text">
-                            <span class="label" data-i18n="btn_download_apk">Download APK</span>
-                            <span class="sub" id="apk-size">~3 MB</span>
-                        </span>
-        </a>
+    <section class="card download-card reveal active">
+      <div class="version-badge">
+        <span data-i18n="latest_version_label">Latest Version</span>: <strong
+          id="web-version-display"></strong>
       </div>
 
-      <div class="divider"><span data-i18n="or_divider">OR</span></div>
+      <div class="download-options">
+        <!-- Direct APK Download -->
+        <div class="download-option primary">
+          <h3 data-i18n="direct_download">Direct Download</h3>
+          <p data-i18n="direct_download_desc">Get the APK file directly. Best for quick updates.</p>
+          <a href="" class="btn-main-download" id="download-apk-btn" download>
+            <span class="icon">⬇️</span>
+            <span class="text">
+              <span class="label" data-i18n="btn_download_apk">Download APK</span>
+              <span class="sub" id="apk-size">~3 MB</span>
+            </span>
+          </a>
+        </div>
 
-      <!-- Store Download -->
-      <div class="download-option secondary">
-        <h3 data-i18n="store_download">App Store</h3>
-        <p data-i18n="store_download_desc">Get automatic updates via Huawei AppGallery.</p>
-        <a href="https://appgallery.huawei.com/app/C116746875" target="_blank"
-           class="btn-store-download huawei">
-          <span class="icon">👜</span>
-          <span data-i18n="btn_appgallery">Explore on AppGallery</span>
-        </a>
+        <div class="divider"><span data-i18n="or_divider">OR</span></div>
+
+        <!-- Store Download -->
+        <div class="download-option secondary">
+          <h3 data-i18n="store_download">App Store</h3>
+          <p data-i18n="store_download_desc">Get automatic updates via Huawei AppGallery.</p>
+          <a href="https://appgallery.huawei.com/app/C116746875" target="_blank"
+             class="btn-store-download huawei">
+            <span class="icon">👜</span>
+            <span data-i18n="btn_appgallery">Explore on AppGallery</span>
+          </a>
+        </div>
       </div>
-    </div>
 
-    <div class="changelog-preview">
-      <h4 data-i18n="whats_new">What's New</h4>
-      <div id="changelog-container" class="changelog-container">
-        <!-- Dynamically populated -->
+      <div class="changelog-preview">
+        <h4 data-i18n="whats_new">What's New</h4>
+        <div id="changelog-container" class="changelog-container">
+          <!-- Dynamically populated -->
+        </div>
       </div>
-    </div>
-  </section>
-
-  <a href="index.html" class="back-link" data-i18n="back_home">
-    ← Back to Home
-  </a>
+    </section>
+  </div>
 </div>
 
 <footer></footer>

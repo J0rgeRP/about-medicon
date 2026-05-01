@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="i18n-pending">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,50 +24,94 @@
 </head>
 <body class="privacy-page">
 
-<header class="privacy-header">
+<section class="hero-screen privacy-screen">
   <div class="lang-switcher">
     <button class="lang-btn active" onclick="setLanguage('en')" id="btn-en">EN</button>
     <button class="lang-btn" onclick="setLanguage('es')" id="btn-es">ES</button>
   </div>
-  <h1 data-i18n="priv_title">Privacy Policy</h1>
-  <p data-i18n="priv_subtitle" class="subtitle">Transparency and security for your health data.</p>
-</header>
 
-<div class="container">
+  <div class="privacy-hero">
+    <header class="index-header privacy-hero-copy">
+      <a href="index.html">
+        <img src="ic_launcher.png" alt="Medicon Logo" class="logo">
+      </a>
+      <span class="hero-eyebrow" data-i18n="priv_badge">Offline by design</span>
+      <h1 data-i18n="priv_title">Privacy Policy</h1>
+      <p data-i18n="priv_subtitle" class="subtitle">Transparency and security for your health data.</p>
+      <a href="index.html" class="back-link" data-i18n="back_home">← Back to Home</a>
+    </header>
+
+    <div class="privacy-summary" aria-label="Medicon privacy summary">
+      <div>
+        <strong data-i18n="privacy_summary_1_title">No internet</strong>
+        <span data-i18n="privacy_summary_1_text">Your health data stays on your device.</span>
+      </div>
+      <div>
+        <strong data-i18n="privacy_summary_2_title">No tracking</strong>
+        <span data-i18n="privacy_summary_2_text">No analytics, ads, or third-party profiling.</span>
+      </div>
+      <div>
+        <strong data-i18n="privacy_summary_3_title">Your control</strong>
+        <span data-i18n="privacy_summary_3_text">Export, delete, or keep your records locally.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container privacy-container">
   <main class="card privacy-content">
-    <p data-i18n="priv_intro">Thank you for using <strong>Medicon</strong>. I am committed to protecting your
-      privacy. This Privacy Policy explains how my application handles your information.</p>
+    <p class="privacy-lead" data-i18n="priv_intro">Thank you for using <strong>Medicon</strong>. I am committed to
+      protecting your privacy. This Privacy Policy explains how my application handles your information.</p>
 
-    <h2 data-i18n="priv_section1_title">No Data Collection</h2>
-    <p data-i18n="priv_section1_text">Medicon is a purely offline application. I do not collect, transmit, or store
-      any personal data, health information, or usage statistics on external servers. I do not use any third-party
-      analytics or tracking services.</p>
+    <section class="policy-section">
+      <h2 data-i18n="priv_section1_title">No Data Collection</h2>
+      <p data-i18n="priv_section1_text">Medicon is a purely offline application. I do not collect, transmit, or store
+        any personal data, health information, or usage statistics on external servers. I do not use any third-party
+        analytics or tracking services.</p>
+    </section>
 
-    <h2 data-i18n="priv_section2_title">Local Storage Only</h2>
-    <p data-i18n="priv_section2_text">All information you enter into the application is stored locally on your
-      device using a secure Room database. This data never leaves your phone unless you explicitly choose to
-      export it.</p>
+    <section class="policy-section">
+      <h2 data-i18n="priv_section2_title">Local Storage Only</h2>
+      <p data-i18n="priv_section2_text">All information you enter into the application is stored locally on your
+        device using a secure Room database. This data never leaves your phone unless you explicitly choose to
+        export it.</p>
+    </section>
 
-    <h2 data-i18n="priv_section3_title">No Permissions Required</h2>
-    <p data-i18n="priv_section3_text">To ensure your privacy and security, Medicon does not request any dangerous
-      permissions.</p>
-    <ul>
-      <li data-i18n="perm1"><strong>No Internet Access:</strong> The app cannot connect to the internet.</li>
-      <li data-i18n="perm2"><strong>No Location Tracking:</strong> I do not track your location.</li>
-      <li data-i18n="perm3"><strong>No Camera/Microphone:</strong> I do not access your sensors.</li>
-    </ul>
+    <section class="policy-section">
+      <h2 data-i18n="priv_section3_title">No Permissions Required</h2>
+      <p data-i18n="priv_section3_text">To ensure your privacy and security, Medicon does not request any dangerous
+        permissions.</p>
+      <ul class="privacy-list policy-permissions">
+        <li>
+          <span class="privacy-checkmark" aria-hidden="true">✓</span>
+          <div data-i18n="perm1"><strong>No Internet Access:</strong> The app cannot connect to the internet.</div>
+        </li>
+        <li>
+          <span class="privacy-checkmark" aria-hidden="true">✓</span>
+          <div data-i18n="perm2"><strong>No Location Tracking:</strong> I do not track your location.</div>
+        </li>
+        <li>
+          <span class="privacy-checkmark" aria-hidden="true">✓</span>
+          <div data-i18n="perm3"><strong>No Camera/Microphone:</strong> I do not access your sensors.</div>
+        </li>
+      </ul>
+    </section>
 
-    <h2 data-i18n="priv_section4_title">Data Control</h2>
-    <p data-i18n="priv_section4_text">You have full control over your data. You can delete all stored information at
-      any time by clearing the application data in your device settings or by uninstalling the application. You
-      can also export your data to CSV format for your own records or backups.</p>
+    <section class="policy-section">
+      <h2 data-i18n="priv_section4_title">Data Control</h2>
+      <p data-i18n="priv_section4_text">You have full control over your data. You can delete all stored information at
+        any time by clearing the application data in your device settings or by uninstalling the application. You
+        can also export your data to CSV format for your own records or backups.</p>
+    </section>
 
-    <h2 data-i18n="priv_section5_title">Contact Me</h2>
-    <p data-i18n="priv_section5_text">If you have any questions or suggestions, do not hesitate to contact me
-      at:</p>
-    <p><a href="mailto:j0rgerp.developer@gmail.com" class="contact-email">j0rgerp.developer@gmail.com</a></p>
-
-    <a href="index.html" class="back-link" data-i18n="back_home">← Back to Home</a>
+    <section class="policy-contact">
+      <div>
+        <h2 data-i18n="priv_section5_title">Contact Me</h2>
+        <p data-i18n="priv_section5_text">If you have any questions or suggestions, do not hesitate to contact me
+          at:</p>
+      </div>
+      <a href="mailto:j0rgerp.developer@gmail.com" class="contact-email">j0rgerp.developer@gmail.com</a>
+    </section>
   </main>
 </div>
 

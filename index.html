@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="i18n-pending">
 
 <head>
   <meta charset="UTF-8">
@@ -52,26 +52,65 @@
     <button class="lang-btn" onclick="setLanguage('es')" id="btn-es">ES</button>
   </div>
 
-  <header class="index-header">
-    <img src="ic_launcher.png" alt="Medicon Logo" class="logo">
-    <h1>Medicon</h1>
-    <p class="subtitle" data-i18n="header_subtitle">Your beautiful, private, and complete medicine inventory
-      assistant.</p>
-  </header>
+  <div class="hero-inner">
+    <section class="hero-copy" id="first-card">
+      <span class="hero-eyebrow" data-i18n="hero_badge">Offline medicine control</span>
 
-  <section class="hero-card" id="first-card">
-    <h2 data-i18n="index_section1_title">Your Health, Organized</h2>
-    <p data-i18n="index_section1_text" class="hero-card-text">
-      Medicon is designed to give you full control over your first aid kit and medication schedule.
-      Manage your drugs visually and intuitively with a native experience built for performance and privacy.
-    </p>
+      <header class="index-header">
+        <img src="ic_launcher.png" alt="Medicon Logo" class="logo">
+        <h1>Medicon</h1>
+        <p class="subtitle" data-i18n="header_subtitle">Your beautiful, private, and complete medicine inventory
+          assistant.</p>
+      </header>
 
-    <div class="hero-actions">
-      <a href="download.html" class="btn-hero primary" id="btn-hero-download">
-        <span aria-hidden="true">⬇️</span> <span data-i18n="btn_get_app">Get App</span>
-      </a>
+      <p data-i18n="index_section1_text" class="hero-card-text">
+        Medicon is designed to give you full control over your first aid kit and medication schedule.
+        Manage your drugs visually and intuitively with a native experience built for performance and privacy.
+      </p>
+
+      <div class="hero-actions">
+        <a href="download.html" class="btn-hero primary" id="btn-hero-download">
+          <span aria-hidden="true">⬇️</span> <span data-i18n="btn_get_app">Get App</span>
+        </a>
+        <a href="#features-card" class="btn-hero outline">
+          <span aria-hidden="true">✦</span> <span data-i18n="btn_explore">Explore features</span>
+        </a>
+      </div>
+
+    </section>
+
+    <aside class="hero-visual" aria-label="Medicon app preview">
+      <div class="device-showcase">
+        <div class="phone-shell app-shot-main">
+          <img class="shot-en" src="assets/screenshots/en/home.png" alt="Medicon home screen">
+          <img class="shot-es" src="assets/screenshots/es/home.png" alt="Pantalla de inicio de Medicon">
+        </div>
+        <div class="app-shot-card calendar-shot" aria-hidden="true">
+          <img class="shot-en" src="assets/screenshots/en/calendar.png" alt="">
+          <img class="shot-es" src="assets/screenshots/es/calendar.png" alt="">
+        </div>
+        <div class="app-shot-card take-shot" aria-hidden="true">
+          <img class="shot-en" src="assets/screenshots/en/take.png" alt="">
+          <img class="shot-es" src="assets/screenshots/es/take.png" alt="">
+        </div>
+      </div>
+    </aside>
+
+    <div class="hero-proof" aria-label="Medicon privacy highlights">
+      <div>
+        <strong data-i18n="proof_1_value">0</strong>
+        <span data-i18n="proof_1_label">tracking permissions</span>
+      </div>
+      <div>
+        <strong data-i18n="proof_2_value">100%</strong>
+        <span data-i18n="proof_2_label">offline first</span>
+      </div>
+      <div>
+        <strong data-i18n="proof_3_value">CSV</strong>
+        <span data-i18n="proof_3_label">import and export</span>
+      </div>
     </div>
-  </section>
+  </div>
 
   <div class="scroll-indicator" id="scroll-indicator" role="button" aria-label="Scroll down" tabindex="0"
        onclick="document.getElementById('main-content').scrollIntoView({behavior: 'smooth'})">
@@ -83,44 +122,68 @@
 </div>
 
 <div class="container" id="main-content">
+  <section class="trust-strip reveal" aria-label="Medicon guarantees">
+    <div>
+      <strong data-i18n="trust_1_title">Private by design</strong>
+      <span data-i18n="trust_1_text">No ads, no trackers, no cloud account.</span>
+    </div>
+    <div>
+      <strong data-i18n="trust_2_title">Built for real routines</strong>
+      <span data-i18n="trust_2_text">Profiles, reminders, widgets, and history.</span>
+    </div>
+    <div>
+      <strong data-i18n="trust_3_title">Always under your control</strong>
+      <span data-i18n="trust_3_text">Local storage with CSV portability.</span>
+    </div>
+  </section>
+
   <section class="card reveal feature-card" id="features-card">
     <h2><span data-i18n="features_title">Key Features</span></h2>
     <div class="feature-grid">
       <div class="feature-item">
-        <strong data-i18n="feat1_title">📦 Unlimited Inventory</strong>
+        <span class="feature-icon" aria-hidden="true">📦</span>
+        <strong data-i18n="feat1_title">Unlimited Inventory</strong>
         <span data-i18n="feat1_desc">Register drugs with dosage, color, purchase & expiration dates, and
                         prescription requirements.</span>
       </div>
       <div class="feature-item">
-        <strong data-i18n="feat2_title">💊 Detailed Intake Log</strong>
+        <span class="feature-icon" aria-hidden="true">💊</span>
+        <strong data-i18n="feat2_title">Detailed Intake Log</strong>
         <span data-i18n="feat2_desc">Track every dose with date, time, and specific reasons to keep a
                         perfect history.</span>
       </div>
       <div class="feature-item">
-        <strong data-i18n="feat3_title">📅 Interactive Calendar</strong>
+        <span class="feature-icon" aria-hidden="true">📅</span>
+        <strong data-i18n="feat3_title">Interactive Calendar</strong>
         <span data-i18n="feat3_desc">Browse your history with beautiful animations and advanced filtering
                         options.</span>
       </div>
       <div class="feature-item">
-        <strong data-i18n="feat4_title">👥 Unlimited Profiles</strong>
+        <span class="feature-icon" aria-hidden="true">👥</span>
+        <strong data-i18n="feat4_title">Unlimited Profiles</strong>
         <span data-i18n="feat4_desc">Manage medications for multiple people with independent and personalized profiles.</span>
       </div>
       <div class="feature-item">
-        <strong data-i18n="feat5_title">🔔 Smart Reminders</strong>
+        <span class="feature-icon" aria-hidden="true">🔔</span>
+        <strong data-i18n="feat5_title">Smart Reminders</strong>
         <span data-i18n="feat5_desc">Stay on track with reminders that integrate directly with your phone's
                         native calendar.</span>
       </div>
       <div class="feature-item">
-        <strong data-i18n="feat6_title">📱 Quick-Action Widget</strong>
+        <span class="feature-icon" aria-hidden="true">📱</span>
+        <strong data-i18n="feat6_title">Quick-Action Widget</strong>
         <span data-i18n="feat6_desc">Register takes in seconds without even opening the app.</span>
       </div>
     </div>
   </section>
 
   <section class="card highlight-section reveal">
-    <h2 data-i18n="privacy_title">Privacy First</h2>
-    <p class="privacy-intro" data-i18n="privacy_text">Medicon respects your data. It is a <strong>pure
-      native</strong> application with <strong>zero permissions</strong> required:</p>
+    <div class="privacy-copy">
+      <span class="section-kicker" data-i18n="privacy_kicker">No compromise on data</span>
+      <h2 data-i18n="privacy_title">Privacy First</h2>
+      <p class="privacy-intro" data-i18n="privacy_text">Medicon respects your data. It is a <strong>pure
+        native</strong> application with <strong>zero permissions</strong> required:</p>
+    </div>
     <ul class="privacy-list">
       <li>
         <span class="privacy-checkmark" aria-hidden="true">✓</span>
@@ -144,6 +207,7 @@
   </section>
 
   <section class="cta-section reveal" id="donate-section">
+    <span class="section-kicker" data-i18n="donate_kicker">Independent project</span>
     <h2 data-i18n="donate_title">Support Development</h2>
     <p data-i18n="cta_text">
       I developed this application in my free time because I believe in health data privacy. It has no ads, no
