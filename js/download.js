@@ -80,7 +80,6 @@ export function initDownloadPage() {
     const modalCancelBtn = document.getElementById('modal-cancel-btn');
 
     const comparison = compareVersions(LATEST_VERSION, userVersion);
-    let showModal = false;
 
     // Get current lang for messages (simple check)
     const isEs = document.documentElement.lang === 'es' || (navigator.language
@@ -110,8 +109,6 @@ export function initDownloadPage() {
         modalCancelBtn.textContent = isEs ? translations.es.modal_btn_dismiss
             : "Dismiss";
       }
-
-      showModal = true;
     } else {
       // Up to date
       modalTitle.textContent = isEs ? translations.es.modal_latest_title
@@ -131,12 +128,8 @@ export function initDownloadPage() {
       if (modalCancelBtn) {
         modalCancelBtn.classList.add('hidden');
       }
-
-      showModal = true;
     }
 
-    if (showModal) {
-      modal.classList.remove('hidden');
-    }
+    modal.classList.remove('hidden');
   }
 }
