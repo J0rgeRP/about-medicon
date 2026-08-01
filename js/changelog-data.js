@@ -58,5 +58,17 @@ export const changelogData = [
         "NUEVO: Se ha añadido un botón central en la barra de navegación que permite crear recordatorios, medicamentos y tomas de forma cómoda y desde cualquier lugar de la app."
       ]
     }
+  },
+  {
+    version: "1.4.1",
+    date: "2026-08-01",
+    changes: {
+      en: [
+        "Medication doses can now include decimals (e.g., 0.5 mg)."
+      ],
+      es: [
+        "Las dosis de los medicamentos ahora pueden incluir decimales (p. ej., 0.5 mg)."
+      ]
+    }
   }
 ];
