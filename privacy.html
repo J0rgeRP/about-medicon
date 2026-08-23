@@ -9,6 +9,7 @@
   <meta name="description"
         content="Privacy Policy for Medicon. We do not collect, store, or share your data. Your health information stays on your device.">
   <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#FFF8EA">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="ic_launcher.png">
@@ -16,103 +17,181 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
         rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/privacy.css">
 </head>
-<body class="privacy-page">
 
-<section class="hero-screen privacy-screen">
-  <div class="lang-switcher">
-    <button class="lang-btn active" onclick="setLanguage('en')" id="btn-en">EN</button>
-    <button class="lang-btn" onclick="setLanguage('es')" id="btn-es">ES</button>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<header class="site-nav" id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="Medicon — home">
+      <img src="ic_launcher.png" alt="" width="36" height="36" class="nav-logo">
+      Medicon
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#features-card" data-i18n="nav_features">Features</a>
+      <a href="index.html#faq" data-i18n="nav_faq">FAQ</a>
+      <a href="download.html" data-i18n="nav_download">Download</a>
+    </nav>
+
+    <div class="nav-actions">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+        <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
+      </div>
+
+      <a href="download.html" class="btn-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+             stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        <span data-i18n="btn_get_app">Get App</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile"
+              aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 
-  <div class="privacy-hero">
-    <header class="index-header privacy-hero-copy">
-      <a href="index.html">
-        <img src="ic_launcher.png" alt="Medicon Logo" class="logo">
-      </a>
-      <span class="hero-eyebrow" data-i18n="priv_badge">Offline by design</span>
-      <h1 data-i18n="priv_title">Privacy Policy</h1>
-      <p data-i18n="priv_subtitle" class="subtitle">Transparency and security for your health data.</p>
-      <a href="index.html" class="back-link" data-i18n="back_home">← Back to Home</a>
-    </header>
+  <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile">
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+      <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
+    </div>
+    <a href="index.html#features-card" data-i18n="nav_features">Features</a>
+    <a href="index.html#faq" data-i18n="nav_faq">FAQ</a>
+    <a href="download.html" data-i18n="nav_download">Download</a>
+    <a href="download.html" class="btn-pill full">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+           stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      <span data-i18n="btn_get_app">Get App</span>
+    </a>
+  </nav>
+</header>
 
-    <div class="privacy-summary" aria-label="Medicon privacy summary">
-      <div>
-        <strong data-i18n="privacy_summary_1_title">No internet</strong>
-        <span data-i18n="privacy_summary_1_text">Your health data stays on your device.</span>
-      </div>
-      <div>
-        <strong data-i18n="privacy_summary_2_title">No tracking</strong>
-        <span data-i18n="privacy_summary_2_text">No analytics, ads, or third-party profiling.</span>
-      </div>
-      <div>
-        <strong data-i18n="privacy_summary_3_title">Your control</strong>
-        <span data-i18n="privacy_summary_3_text">Export, delete, or keep your records locally.</span>
-      </div>
+<!-- ============ PRIVACY HERO ============ -->
+<section class="hero-screen privacy-screen">
+  <div class="privacy-head">
+    <span class="hero-eyebrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+           stroke-linejoin="round" aria-hidden="true">
+        <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+        <path d="m9 12 2 2 4-4"/>
+      </svg>
+      <span data-i18n="priv_badge">Offline by design</span>
+    </span>
+    <h1 data-i18n="priv_title">Privacy Policy</h1>
+    <p class="subtitle" data-i18n="priv_subtitle">Transparency and security for your health data.</p>
+  </div>
+
+  <div class="privacy-summary" aria-label="Medicon privacy summary">
+    <div>
+      <strong data-i18n="privacy_summary_1_title">No internet</strong>
+      <span data-i18n="privacy_summary_1_text">Your health data stays on your device.</span>
+    </div>
+    <div>
+      <strong data-i18n="privacy_summary_2_title">No tracking</strong>
+      <span data-i18n="privacy_summary_2_text">No analytics, ads, or third-party profiling.</span>
+    </div>
+    <div>
+      <strong data-i18n="privacy_summary_3_title">Your control</strong>
+      <span data-i18n="privacy_summary_3_text">Export, delete, or keep your records locally.</span>
     </div>
   </div>
 </section>
 
 <div class="container privacy-container">
-  <main class="card privacy-content">
-    <p class="privacy-lead" data-i18n="priv_intro">Thank you for using <strong>Medicon</strong>. I am committed to
-      protecting your privacy. This Privacy Policy explains how my application handles your information.</p>
+  <main>
+    <article class="card privacy-content reveal">
+      <p class="privacy-lead" data-i18n="priv_intro">Thank you for using <strong>Medicon</strong>. I am committed
+        to protecting your privacy. This Privacy Policy explains how my application handles your information.</p>
 
-    <section class="policy-section">
-      <h2 data-i18n="priv_section1_title">No Data Collection</h2>
-      <p data-i18n="priv_section1_text">Medicon is a purely offline application. I do not collect, transmit, or store
-        any personal data, health information, or usage statistics on external servers. I do not use any third-party
-        analytics or tracking services.</p>
-    </section>
+      <section class="policy-section">
+        <h2 data-i18n="priv_section1_title">No Data Collection</h2>
+        <p data-i18n="priv_section1_text">Medicon is a purely offline application. I do not collect, transmit, or
+          store any personal data, health information, or usage statistics on external servers. I do not use any
+          third-party analytics or tracking services.</p>
+      </section>
 
-    <section class="policy-section">
-      <h2 data-i18n="priv_section2_title">Local Storage Only</h2>
-      <p data-i18n="priv_section2_text">All information you enter into the application is stored locally on your
-        device using a secure Room database. This data never leaves your phone unless you explicitly choose to
-        export it.</p>
-    </section>
+      <section class="policy-section">
+        <h2 data-i18n="priv_section2_title">Local Storage Only</h2>
+        <p data-i18n="priv_section2_text">All information you enter into the application is stored locally on
+          your device using a secure Room database. This data never leaves your phone unless you explicitly
+          choose to export it.</p>
+      </section>
+    </article>
 
-    <section class="policy-section">
-      <h2 data-i18n="priv_section3_title">No Permissions Required</h2>
-      <p data-i18n="priv_section3_text">To ensure your privacy and security, Medicon does not request any dangerous
-        permissions.</p>
-      <ul class="privacy-list policy-permissions">
-        <li>
-          <span class="privacy-checkmark" aria-hidden="true">✓</span>
-          <div data-i18n="perm1"><strong>No Internet Access:</strong> The app cannot connect to the internet.</div>
-        </li>
-        <li>
-          <span class="privacy-checkmark" aria-hidden="true">✓</span>
-          <div data-i18n="perm2"><strong>No Location Tracking:</strong> I do not track your location.</div>
-        </li>
-        <li>
-          <span class="privacy-checkmark" aria-hidden="true">✓</span>
-          <div data-i18n="perm3"><strong>No Camera/Microphone:</strong> I do not access your sensors.</div>
-        </li>
-      </ul>
-    </section>
+    <section class="privacy-dark policy-dark reveal">
+      <svg class="shield-watermark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+      </svg>
 
-    <section class="policy-section">
-      <h2 data-i18n="priv_section4_title">Data Control</h2>
-      <p data-i18n="priv_section4_text">You have full control over your data. You can delete all stored information at
-        any time by clearing the application data in your device settings or by uninstalling the application. You
-        can also export your data to CSV format for your own records or backups.</p>
-    </section>
+      <div class="policy-dark-inner">
+        <span class="section-kicker light"><span data-i18n="privacy_kicker">No compromise on data</span></span>
+        <h2 data-i18n="priv_section3_title">No Permissions Required</h2>
+        <p class="policy-dark-text" data-i18n="priv_section3_text">To ensure your privacy and security, Medicon
+          does not request any dangerous permissions.</p>
 
-    <section class="policy-contact">
-      <div>
-        <h2 data-i18n="priv_section5_title">Contact Me</h2>
-        <p data-i18n="priv_section5_text">If you have any questions or suggestions, do not hesitate to contact me
-          at:</p>
+        <ul class="privacy-list dark">
+          <li>
+            <span class="privacy-checkmark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"
+                   stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            <div data-i18n="perm1"><strong>No Internet Access:</strong> The app cannot connect to the internet.
+            </div>
+          </li>
+          <li>
+            <span class="privacy-checkmark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"
+                   stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            <div data-i18n="perm2"><strong>No Location Tracking:</strong> I do not track your location.</div>
+          </li>
+          <li>
+            <span class="privacy-checkmark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"
+                   stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            <div data-i18n="perm3"><strong>No Camera/Microphone:</strong> I do not access your sensors.</div>
+          </li>
+        </ul>
       </div>
-      <a href="mailto:j0rgerp.developer@gmail.com" class="contact-email">j0rgerp.developer@gmail.com</a>
     </section>
+
+    <article class="card privacy-content reveal">
+      <section class="policy-section first">
+        <h2 data-i18n="priv_section4_title">Data Control</h2>
+        <p data-i18n="priv_section4_text">You have full control over your data. You can delete all stored
+          information at any time by clearing the application data in your device settings or by uninstalling
+          the application. You can also export your data to CSV format for your own records or backups.</p>
+      </section>
+
+      <section class="policy-contact">
+        <div>
+          <h2 data-i18n="priv_section5_title">Contact Me</h2>
+          <p data-i18n="priv_section5_text">If you have any questions or suggestions, do not hesitate to contact
+            me at:</p>
+        </div>
+        <a href="mailto:j0rgerp.developer@gmail.com" class="contact-email">j0rgerp.developer@gmail.com</a>
+      </section>
+    </article>
   </main>
 </div>
 

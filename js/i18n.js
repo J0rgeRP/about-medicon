@@ -1,11 +1,19 @@
 const translations = {
   en: {},
   es: {
-    // Index
+    // Index — Navbar
+    nav_features: "Características",
+    nav_screenshots: "Capturas",
+    nav_privacy: "Privacidad",
+    nav_faq: "Preguntas",
+    nav_download: "Descargar",
+
+    // Index — Hero
     hero_badge: "Control de medicación offline",
-    header_subtitle: "Tu asistente de inventario de medicamentos: bonito, privado y completo.",
-    index_section1_title: "Tu Salud, Organizada",
-    index_section1_text: "Medicon está diseñado para darte control total sobre tu botiquín y horario de medicación. Gestiona tus medicamentos de forma visual e intuitiva con una experiencia nativa pensada para el rendimiento y la privacidad.",
+    hero_title_1: "Cada dosis,",
+    hero_title_2: "bajo control.",
+    header_subtitle: "Medicon es tu asistente privado y offline para el inventario de medicamentos. Registra cada toma, mantén tu botiquín organizado y mantén el control de tus datos de salud.",
+    hero_meta: "Gratis · ~3 MB · Sin cuenta",
     btn_explore: "Ver características",
     proof_1_value: "0",
     proof_1_label: "permisos de rastreo",
@@ -13,13 +21,23 @@ const translations = {
     proof_2_label: "offline primero",
     proof_3_value: "CSV",
     proof_3_label: "importación y exportación",
-    trust_1_title: "Privada por diseño",
-    trust_1_text: "Sin anuncios, trackers ni cuenta en la nube.",
-    trust_2_title: "Pensada para rutinas reales",
-    trust_2_text: "Perfiles, recordatorios, widgets e historial.",
-    trust_3_title: "Siempre bajo tu control",
-    trust_3_text: "Almacenamiento local con portabilidad CSV.",
+    float_1_t: "Dosis registrada",
+    float_1_d: "22:25 · Acetaminofén 500 mg",
+    float_2_t: "Recordatorio creado",
+    float_2_d: "Mañana · 9:00",
+
+    // Index — Marquee
+    mq_1: "Sin anuncios",
+    mq_2: "Sin trackers",
+    mq_3: "Funciona 100% sin conexión",
+    mq_4: "Cero permisos",
+    mq_5: "Importa y exporta en CSV",
+    mq_6: "Perfiles ilimitados",
+
+    // Index — Features
+    features_kicker: "Todo lo que necesitas",
     features_title: "Características Principales",
+    features_sub: "Herramientas pensadas para registrar sin esfuerzo — todo sin conexión.",
     feat1_title: "Inventario Ilimitado",
     feat1_desc: "Registra medicamentos con dosis, color, fechas de compra y caducidad, y si requieren receta.",
     feat2_title: "Registro Detallado",
@@ -32,20 +50,62 @@ const translations = {
     feat5_desc: "Mantente al día con recordatorios que se integran directamente con el calendario nativo de tu teléfono.",
     feat6_title: "Widget Rápido",
     feat6_desc: "Registra tomas en segundos sin siquiera abrir la aplicación.",
+
+    // Index — Showcase
+    showcase_kicker: "Véala en acción",
+    showcase_title: "Diseñada con mimo",
+    showcase_sub: "Rendimiento nativo de Android envuelto en una interfaz cálida y amable.",
+    cap_1: "Panel de inicio",
+    cap_2: "Calendario histórico",
+    cap_3: "Registro rápido de dosis",
+
+    // Index — Steps
+    steps_kicker: "Sencilla por diseño",
+    steps_title: "Cómo funciona",
+    step1_t: "Añade tus medicamentos",
+    step1_d: "Registra dosis, colores, fechas de compra y caducidad, y si requieren receta.",
+    step2_t: "Registra cada toma",
+    step2_d: "Con un toque desde la app o directamente desde el widget de inicio.",
+    step3_t: "Repasa tu historial",
+    step3_d: "Explora el calendario interactivo y exporta todo a CSV cuando quieras.",
+
+    // Index — Privacy
     privacy_kicker: "Datos sin concesiones",
     privacy_title: "Privacidad Ante Todo",
     privacy_text: "Medicon respeta tus datos. Es una aplicación <strong>puramente nativa</strong> que requiere <strong>cero permisos</strong>:",
+    priv_zero: "permisos peligrosos solicitados en la instalación",
     priv_item1_title: "Sin Internet:",
     priv_item1_desc: "Tus datos nunca salen de tu dispositivo.",
     priv_item2_title: "Base de Datos Local:",
     priv_item2_desc: "Toda la información se almacena segura en una base de datos local.",
     priv_item3_title: "Exportable:",
     priv_item3_desc: "Control total con capacidades de exportación e importación CSV.",
+
+    // Index — FAQ
+    faq_kicker: "Conviene saber",
+    faq_title: "Preguntas frecuentes",
+    faq_q1: "¿De verdad es gratis Medicon?",
+    faq_a1: "Sí: es 100% gratuita, sin anuncios ni compras dentro de la app. Si te resulta útil, puedes apoyar su desarrollo invitándome a un café.",
+    faq_q2: "¿Necesita conexión a Internet o una cuenta?",
+    faq_a2: "No. Medicon funciona totalmente sin conexión y no requiere registro: tus datos se guardan únicamente en tu dispositivo.",
+    faq_q3: "¿Puedo gestionar la medicación de mi familia?",
+    faq_a3: "Por supuesto. Crea perfiles ilimitados e independientes y mantén separados los medicamentos, las tomas y el historial de cada persona.",
+    faq_q4: "¿Cómo paso mis datos a un teléfono nuevo?",
+    faq_a4: "Exporta todo tu historial a CSV desde el dispositivo antiguo e impórtalo en el nuevo. Tus datos nunca pasan por ningún servidor.",
+    faq_q5: "¿Cómo instalo el APK de forma segura?",
+    faq_a5: "Descárgalo desde esta web o desde Huawei AppGallery, permite la instalación desde tu navegador cuando Android lo pida y abre el archivo. Las actualizaciones se anuncian aquí mismo.",
+
+    // Index — Support
     donate_kicker: "Proyecto independiente",
     donate_title: "Apoya el Desarrollo",
     cta_text: "He desarrollado esta aplicación en mi tiempo libre porque creo en la privacidad de los datos de salud. No tiene anuncios, no tiene trackers y es totalmente gratuita. Si te resulta útil y quieres invitarme a un café para que siga manteniéndola, puedes hacerlo aquí:",
     btn_paypal: "Invítame a un café",
+
+    // Footer
+    footer_tagline: "Tu salud, organizada — y en privado.",
     footer_made_by: "Hecho con ❤️ para tu salud.",
+    footer_explore: "Explorar",
+    footer_project: "Proyecto",
     footer_privacy: "Política de Privacidad",
     footer_contact: "Contacto",
     footer_github: "GitHub",
@@ -54,19 +114,15 @@ const translations = {
     download_kicker: "App Android privada",
     download_subtitle: "Descarga la última versión",
     latest_version_label: "Última Versión",
+    download_recommended: "Recomendada",
     direct_download: "Descarga Directa",
     direct_download_desc: "Obtén el archivo APK directamente. Ideal para actualizaciones rápidas.",
     btn_download_apk: "Descargar APK",
-    or_divider: "O",
     store_download: "Tienda de Apps",
     store_download_desc: "Obtén actualizaciones automáticas vía Huawei AppGallery.",
     btn_appgallery: "Explorar en AppGallery",
     whats_new: "Novedades",
-    changelog_1: "Mejoras de rendimiento",
-    changelog_2: "Corrección de errores menores",
-    back_home: "← Volver al Inicio",
     btn_get_app: "Descargar App",
-    btn_appgallery_short: "AppGallery",
 
     // Modals
     modal_update_title: "¡Actualización Disponible!",
@@ -114,7 +170,7 @@ export function setLanguage(lang) {
     }
   });
   document.querySelectorAll('.lang-btn').forEach(
-      btn => btn.classList.toggle('active', btn.id === `btn-${lang}`));
+      btn => btn.classList.toggle('active', btn.dataset.lang === lang));
 
   // Dispatch event for components that need dynamic re-render
   window.dispatchEvent(new CustomEvent('languageChanged', {detail: {lang}}));

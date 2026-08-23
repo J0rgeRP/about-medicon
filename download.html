@@ -8,7 +8,7 @@
 
   <!-- Meta Tags -->
   <meta name="description" content="Download the latest version of Medicon directly or via AppGallery.">
-  <meta name="theme-color" content="#A9BD95">
+  <meta name="theme-color" content="#FFF8EA">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="ic_launcher.png">
@@ -16,7 +16,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
         rel="stylesheet">
 
   <!-- Styles -->
@@ -44,38 +44,100 @@
   </div>
 </div>
 
-<div class="hero-screen download-screen">
-  <div class="lang-switcher">
-    <button class="lang-btn active" onclick="setLanguage('en')" id="btn-en">EN</button>
-    <button class="lang-btn" onclick="setLanguage('es')" id="btn-es">ES</button>
-  </div>
+<!-- ============ NAVBAR ============ -->
+<header class="site-nav" id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="Medicon — home">
+      <img src="ic_launcher.png" alt="" width="36" height="36" class="nav-logo">
+      Medicon
+    </a>
 
-  <div class="download-layout">
-    <header class="index-header download-header">
-      <a href="index.html">
-        <img src="ic_launcher.png" alt="Medicon Logo" class="logo">
-      </a>
-      <span class="hero-eyebrow" data-i18n="download_kicker">Private Android app</span>
-      <h1>Medicon</h1>
-      <p class="subtitle" data-i18n="download_subtitle">Download the latest version</p>
-      <a href="index.html" class="back-link" data-i18n="back_home">
-        ← Back to Home
-      </a>
-    </header>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#features-card" data-i18n="nav_features">Features</a>
+      <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+      <a href="index.html#faq" data-i18n="nav_faq">FAQ</a>
+    </nav>
 
-    <section class="card download-card reveal active">
-      <div class="version-badge">
-        <span data-i18n="latest_version_label">Latest Version</span>: <strong
-          id="web-version-display"></strong>
+    <div class="nav-actions">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+        <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
       </div>
 
+      <a href="#download-card" class="btn-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+             stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        <span data-i18n="btn_get_app">Get App</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile"
+              aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile">
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+      <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
+    </div>
+    <a href="index.html#features-card" data-i18n="nav_features">Features</a>
+    <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+    <a href="index.html#faq" data-i18n="nav_faq">FAQ</a>
+    <a href="#download-card" class="btn-pill full">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+           stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      <span data-i18n="btn_get_app">Get App</span>
+    </a>
+  </nav>
+</header>
+
+<!-- ============ DOWNLOAD HERO ============ -->
+<section class="hero-screen download-screen">
+  <div class="download-head">
+    <span class="hero-eyebrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+           stroke-linejoin="round" aria-hidden="true">
+        <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+        <path d="m9 12 2 2 4-4"/>
+      </svg>
+      <span data-i18n="download_kicker">Private Android app</span>
+    </span>
+    <h1>Medicon</h1>
+    <p class="subtitle" data-i18n="download_subtitle">Download the latest version</p>
+
+    <span class="version-chip">
+      <span data-i18n="latest_version_label">Latest Version</span>
+      <strong id="web-version-display"></strong>
+    </span>
+
+    <p class="hero-meta" data-i18n="hero_meta">Free · ~3 MB · No account needed</p>
+  </div>
+
+  <div class="download-cards">
+    <section class="card download-card reveal" id="download-card">
       <div class="download-options">
         <!-- Direct APK Download -->
-        <div class="download-option primary">
+        <div class="download-option featured">
+          <span class="option-tag" data-i18n="download_recommended">Recommended</span>
           <h3 data-i18n="direct_download">Direct Download</h3>
           <p data-i18n="direct_download_desc">Get the APK file directly. Best for quick updates.</p>
           <a href="" class="btn-main-download" id="download-apk-btn" download>
-            <span class="icon">⬇️</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                 stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
             <span class="text">
               <span class="label" data-i18n="btn_download_apk">Download APK</span>
               <span class="sub" id="apk-size">~3 MB</span>
@@ -83,31 +145,34 @@
           </a>
         </div>
 
-        <div class="divider"><span data-i18n="or_divider">OR</span></div>
-
         <!-- Store Download -->
-        <div class="download-option secondary">
+        <div class="download-option">
           <h3 data-i18n="store_download">App Store</h3>
           <p data-i18n="store_download_desc">Get automatic updates via Huawei AppGallery.</p>
-          <a href="https://appgallery.huawei.com/app/C116746875" target="_blank"
-             class="btn-store-download huawei">
-            <span class="icon">👜</span>
+          <a href="https://appgallery.huawei.com/app/C116746875" target="_blank" rel="noopener noreferrer"
+             class="btn-store-download">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+              <path d="M3 6h18"/>
+              <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
             <span class="text">
               <span class="label" data-i18n="btn_appgallery">Explore on AppGallery</span>
             </span>
           </a>
         </div>
       </div>
+    </section>
 
-      <div class="changelog-preview">
-        <h4 data-i18n="whats_new">What's New</h4>
-        <div id="changelog-container" class="changelog-container">
-          <!-- Dynamically populated -->
-        </div>
+    <section class="card changelog-card reveal">
+      <h4 data-i18n="whats_new">What's New</h4>
+      <div id="changelog-container" class="changelog-container">
+        <!-- Dynamically populated -->
       </div>
     </section>
   </div>
-</div>
+</section>
 
 <footer></footer>
 
